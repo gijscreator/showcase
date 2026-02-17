@@ -1,1 +1,39 @@
 {% render 'partials/head.liquid' %}
+
+<main>
+    {% comment %}
+        Section with banner, text, button and heading
+    {% endcomment %}
+    <section>
+        <img src="/assets/images/bannerhome.png" alt="Airbus A380 on the runway">
+
+        <article>
+            <h2>Airbus A380</h2>
+            <p>Ready for departure? Choose your seat, relax and enjoy the flight</p>
+            <a href="/choose-seat" class="primary">Choose your seat</a>
+        </article>
+    </section>
+
+    <section>
+        <article>
+            <h2>Choose your seat aboard our A380</h2>
+            <p>Ready for departure? Choose your seat, relax and enjoy the flight</p>
+
+            <div>
+                <p>Economy, premium Economy</p>
+                <a href="/choose-seat-lowerdeck" class="primary">Choose your seat</a>
+            </div>
+
+            <div>
+                <p>Business class, first class</p>
+                <a href="/choose-seat-upperdeck" class="secondary">Choose your seat</a>
+            </div>
+
+            <a href="#help-choose" class="underlined">Help me choose</a>
+
+            
+        </article>
+
+        <img src="/assets/images/bannerhome.png" alt="Airbus A380 on the runway">
+    </section>
+</main>
