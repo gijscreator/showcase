@@ -28,14 +28,33 @@ header {
 }
 
 main {
+    color: white;
 
+    /* All sections for margin reasons */
+    section:not(:first-child) {
+        margin: 10dvh 0;
+    }
+
+    /* Section with banner, text, button and heading */
     section:nth-of-type(1) {
         position: relative;
-        color: white;
 
-        img {
+        img:first-child {
+            display: none;
             margin-top: 1rem;
             border-radius: var(--border-large);
+
+            @media (min-width:589px) {
+                display: block;
+            }
+        }
+
+        img:nth-of-type(2) {
+            display: block;
+
+            @media (min-width:589px) {
+                display: none;
+            }
         }
 
         article {
@@ -50,6 +69,36 @@ main {
                 @media (min-width: 789px) {
                     width: 60%;
                 }
+            }
+        }
+    }
+
+     /* Section with seat choices */
+    section:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+
+        @media (min-width: 789px) {
+            flex-direction: row;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+
+            @media (min-width: 789px) {
+                flex: 50%;
+                width: 20%;
+                height: 50%;
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+
+            @media (min-width: 789px) {
+                flex: 50%;
             }
         }
     }
