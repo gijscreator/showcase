@@ -30,7 +30,7 @@ body {
 
     font-family: inter;
     max-width: 1920px;
-    margin: 1rem;
+    margin: 5vw;
     background-color: var(--darkbackground);
 
     @media (min-width: 1920px) {
