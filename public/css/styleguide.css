@@ -57,7 +57,7 @@ p, a{
 
 /* general link styling */
 
-a  {
+a:not(.logo)  {
     position: relative;
     display: flex;
     align-items: center;
@@ -67,17 +67,10 @@ a  {
     height: clamp(2rem, 3rem, 4rem);
     border-radius: var(--border-link);
     color: white;
+    overflow: visible;
 
     &.primary {
         background-color: var(--primary);
-
-        &::after {
-            position: absolute;
-            top: 20%;
-            right: 1.5rem;
-            height: 80%;
-            content: url(/assets/images/airplane.svg);
-        }
     }
 
     &.secondary {
@@ -86,6 +79,14 @@ a  {
 
     &.underlined {
         text-decoration: underline;
+    }
+
+    svg {
+        position: absolute;
+        top: 25%;
+        right: 10%;
+        z-index: 9999; 
+        pointer-events: none; 
     }
 }
 

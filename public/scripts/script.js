@@ -1,24 +1,37 @@
-gsap.registerEffect({
-    name: "fade",
-    extendTimeline: true,
-    defaults: { duration: 2 },
-    effect: (targets, { duration }) => {
-        return gsap.to(targets, { 
-            duration, 
-            opacity: 0, 
-            display: 'none' 
-        });
-    }
-});
-const timeline = gsap.timeline({
-    defaults: {
-        duration: 2,
-        ease: 'elastic.out'
-    }
-});
+const airplaneLinks = document.querySelectorAll(".primary.button, .secondary.button");
 
-timeline.to(".box",    { rotation: 10, x: '25vw' })
-    .to(".boxone", { rotation: 20, x: '50vw' }, "-=0.45")
-    .to(".boxtwo", { rotation: 30, x: '75vw', ease: 'expo.out' }, "-=0.75")
-    .fade(".box, .boxone, .boxtwo")
-;
+airplaneLinks.forEach(link => {
+
+    const icon = link.querySelector(".airplanesvg");
+
+    const timeline = gsap.timeline({paused: true});    
+
+    // rotation of the nice airplane svg
+    timeline.to(icon, {
+        duration: 0.4,
+        rotation: 180,
+        fill: '#B9941D',
+        ease: "power2.inOut",
+        transformOrigin: "50% 50%"
+    })
+
+    // departure of the nice airplane svg
+    .to(icon, {
+        duration: 0.6,
+        x: -400,   
+        opacity: 0,
+        ease: "power2.in"
+    });
+
+    gsap.to(icon, {
+        duration: 1,
+        rotation: 0,
+        x: 0,
+        opacity: 1,
+        fill: '#ffffff', 
+        overwrite: "auto" 
+    });
+
+    link.addEventListener("mouseenter", () => timeline.play());
+    link.addEventListener("mouseleave", () => timeline.reverse());
+});

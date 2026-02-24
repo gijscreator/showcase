@@ -191,6 +191,14 @@ main.home {
                 border-bottom: 2px solid var(--darkbackground);
                 text-align: left;
 
+                p:nth-of-type(2) {
+                    text-align: right;
+                }
+
+                path {
+                    transform-origin: center;
+                }
+
             }
         }
     }
