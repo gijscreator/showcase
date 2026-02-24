@@ -30,7 +30,7 @@ body {
 
     font-family: inter;
     max-width: 1920px;
-    margin: 5vw;
+    margin: 3vw;
     background-color: var(--darkbackground);
 
     @media (min-width: 1920px) {
@@ -43,11 +43,11 @@ h1, h2 {
 }
 
 h3, h4 {
-    font-size: clamp(1.8rem, 3vw + 1rem, 3rem)
+    font-size: clamp(1.8rem, 3vw + 1rem, 3rem);
 }
 
 h5 {
-    font-size: clamp(1.3rem, 2vw + 1rem, 1.5rem)
+    font-size: clamp(1.3rem, 2vw + 1rem, 1.5rem);
 }
 
 p, a{
@@ -87,4 +87,11 @@ a  {
     &.underlined {
         text-decoration: underline;
     }
+}
+
+
+.box, .boxone, .boxtwo {
+    height: 50px; 
+    width: 50px; 
+    background-color: white;
 }

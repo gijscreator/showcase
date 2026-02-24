@@ -1,11 +1,11 @@
 {% render 'partials/head.liquid' %}
 
-<main>
+<main class="home">
 
     {% comment %} Section with banner, text, button and heading {% endcomment %}
     <section>
-        <img src="/assets/images/bannerhome.png" alt="Airbus A380 on the runway">
-        <img src="/assets/images/bannerhomemobile.avif" alt="Airbus A380 on the runway">
+        <img src="/assets/images/bannerhome.webp" alt="Airbus A380 on the runway">
+        <img src="/assets/images/bannerhomemobile.webp" alt="Airbus A380 on the runway">
 
         <article>
             <h2>Airbus A380</h2>
@@ -14,7 +14,7 @@
         </article>
     </section>
 
-    {% comment %} Section with seat choices {% endcomment %}
+    {% comment %} Section with call to action seat choices {% endcomment %}
     <section>
         <article>
             <h2>Choose your seat aboard our A380</h2>
@@ -36,6 +36,78 @@
             
         </article>
 
-        <img src="/assets/images/businessclass.png" alt="Business class in an A380 airplane">
+        <img src="/assets/images/businessclass.webp" alt="Business class in an A380 airplane">
+    </section>
+
+    {% comment %} Section with all seats comparison {% endcomment %}
+    <section>
+        <h2>Not sure which to choose?</h2>
+        <p>Not all seats are created equal. From the exclusive quiet of the upper deck to the spacious layout of the lower deck, explore our side-by-side comparison below to discover the unique perks waiting for you on each level.</p>
+        <div>
+            {% comment %} Economy {% endcomment %}
+            <article>
+                <h3>Economy</h3>
+                <img src="assets/images/economy.webp" alt="">
+                <ul>
+                    <li>
+                        <p>Seat bed</p>
+                        {% comment %} x svg cross {% endcomment %}
+                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.5 1.5L1.5 25.5M1.5 1.5L25.5 25.5" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </li>
+                    <li>
+                        <p>Privacy</p>
+                        {% comment %} x svg cross {% endcomment %}
+                        <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M25.5 1.5L1.5 25.5M1.5 1.5L25.5 25.5" stroke="#1E1E1E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </li>
+                    <li>
+                        <p>Dining</p>
+                        <p>Set times</p>
+                    </li>
+                    <li>
+                        <p>Amenities</p>
+                        <p>Headphones</p>
+                    </li>
+                    <li>
+                        <p>Storage</p>
+                        <p>Overhead bin</p>
+                    </li>
+                    <li>
+                        <p>Screen</p>
+                        <p>Standard</p>
+                    </li>
+                    <li>
+                        <p>Extra's</p>
+                        <p>None</p>
+                    </li>
+                </ul>
+            </article>
+
+            {% comment %} Business class {% endcomment %}
+            <article>
+                <h3>Business class</h3>
+                <img src="assets/images/business.webp" alt="">
+                <ul>
+                </ul>
+            </article>
+
+            {% comment %} First class {% endcomment %}
+            <article>
+                <h3>First class</h3>
+                <img src="assets/images/firstclass.webp" alt="">
+                <ul>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <section>
+        <div class="box"></div>
+        <div class="boxone"></div>
+        <div class="boxtwo"></div>
+        <button class="play">play me</button>
     </section>
 </main>

@@ -1,4 +1,5 @@
 import express from 'express'
+
 import { Liquid } from 'liquidjs'
 
 const app = express()
@@ -16,4 +17,17 @@ app.get('/', async (request, response) => {
 
     response.render('index.liquid')
 })
+
+// Seat selection
+app.get('/choose-seat', async (request, response) => {
+
+    response.render('choose_seat.liquid')
+})
+
+// Seat lowerdeck
+app.get('/seat-lowerdeck', async (request, response) => {
+
+    response.render('seat_lowerdeck.liquid')
+})
+
 app.listen(PORT, () => console.log(`App: http://localhost:${PORT}`))
